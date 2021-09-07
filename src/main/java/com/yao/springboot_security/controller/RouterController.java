@@ -20,15 +20,15 @@ public class RouterController {
     public String toLogin(){
         return "login";
     }
-    @RequestMapping("/level1{id}")
+    @RequestMapping("/level1/{id}")
     public String toLevel1(@PathVariable("id") int id){
         return "views/level1/"+id;
     }
-    @RequestMapping("/level2{id}")
+    @RequestMapping("/level2/{id}")
     public String toLevel2(@PathVariable("id") int id){
         return "views/level2/"+id;
     }
-    @RequestMapping("/level3{id}")
+    @RequestMapping("/level3/{id}")
     public String toLevel3(@PathVariable("id") int id){
         return "views/level3/"+id;
     }
