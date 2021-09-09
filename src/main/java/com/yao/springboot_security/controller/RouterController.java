@@ -18,7 +18,15 @@ public class RouterController {
 
     @RequestMapping("/toLogin")
     public String toLogin(){
-        return "login";
+        return "views/login";
+    }
+//    @RequestMapping("/toLogin?error")
+//    public String toErrorLogin(){
+//        return "login";
+//    }
+    @RequestMapping("/logOut")
+    public String loginOut(){
+        return "index";
     }
     @RequestMapping("/level1/{id}")
     public String toLevel1(@PathVariable("id") int id){
@@ -32,4 +40,5 @@ public class RouterController {
     public String toLevel3(@PathVariable("id") int id){
         return "views/level3/"+id;
     }
+
 }

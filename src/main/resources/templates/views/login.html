@@ -22,7 +22,7 @@
             <div class="ui column very relaxed stackable grid">
                 <div class="column">
                     <div class="ui form">
-                        <form th:action="@{/usr/login}" method="post">
+                        <form th:action="@{/toLogin}" method="post">
                             <div class="field">
                                 <label>Username</label>
                                 <div class="ui left icon input">
@@ -37,6 +37,10 @@
                                     <i class="lock icon"></i>
                                 </div>
                             </div>
+                            <div class="field">
+                                <input type="checkbox" name="rememberMe">记住我
+                            </div>
+
                             <input type="submit" class="ui blue submit button"/>
                         </form>
                     </div>
@@ -49,18 +53,18 @@
                 </i>注册
             </div>
             <br><br>
-            <small>blog.kuangstudy.com</small>
+            <small>blog.yaoshen.com</small>
         </div>
         <div class="ui segment" style="text-align: center">
-            <h3>Spring Security Study by 秦疆</h3>
+            <h3>Spring Security Study by 尧神</h3>
         </div>
     </div>
 
 
 </div>
 
-<script th:src="@{/qinjiang/js/jquery-3.1.1.min.js}"></script>
-<script th:src="@{/qinjiang/js/semantic.min.js}"></script>
+<script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+<script th:src="@{/js/semantic.min.js}"></script>
 
 </body>
 </html>

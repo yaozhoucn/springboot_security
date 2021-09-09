@@ -33,9 +33,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                .antMatchers("/level3/**").hasRole("vip3");
 
        //没有限权默认到登陆页面
-       http.formLogin();
+       http.formLogin().loginPage("/toLogin").failureUrl("/toLogin");
+
+       http.csrf().disable();
 
        //开启注销功能
-        http.logout().logoutSuccessUrl("/");
+        http.logout().deleteCookies("remember-me").invalidateHttpSession(true);
+
+
+        //开启记住我功能，自定义接收前端参数
+        http.rememberMe().rememberMeParameter("rememberMe");
     }
 }
